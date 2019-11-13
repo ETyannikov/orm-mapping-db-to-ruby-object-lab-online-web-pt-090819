@@ -18,7 +18,11 @@ class Student
     end
   end
   
-  def self.al
+  def self.all_students_in_grade_9
+    sql = <<-SQL
+      SELECT * FROM students WHERE grade = 9
+    SQL
+  end
 
   def self.find_by_name(name)
     sql = <<-SQL
